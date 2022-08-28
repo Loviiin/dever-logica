@@ -1,0 +1,22 @@
+def comeco():
+    global entrada
+    print("seja bem vindo ao cinema")
+    entrada=(input("seu filme começou?"))
+
+
+def horario():
+    global minutos
+    if entrada == "sim":
+        minutos = float(input("a quanto tempo seu filme começou?"))
+        if minutos <= 30:
+            print("pode entrar")
+        else:
+            print("atrasado")
+    if entrada == "nao":
+        print("muito cedo")
+
+
+def main():
+    comeco()
+    horario()
+main()
