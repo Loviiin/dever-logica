@@ -7,14 +7,17 @@ def comeco():
 def horario():
     global minutos
     if entrada == "sim":
-        minutos = float(input("a quanto tempo seu filme começou?"))
+        minutos = int(input("a quanto tempo seu filme começou?"))
         if minutos <= 30:
             print("pode entrar")
         else:
             print("atrasado")
     if entrada == "nao":
-        print("muito cedo")
-
+        minutos = int(input("seu filme começa em quantos minutos?"))
+        if minutos > 30:
+            print("muito cedo")
+        else:
+            print("pode entrar")
 
 def main():
     comeco()
